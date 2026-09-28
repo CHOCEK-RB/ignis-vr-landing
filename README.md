@@ -68,7 +68,7 @@ pagina_web/
 
 ## 🔌 Integración con Backend (Next.js / REST / GraphQL)
 
-El archivo [`src/data/gameData.js`](file:///home/JustLuis/Documents/semestre_08/ihc/pagina_web/src/data/gameData.js) concentra todo el contenido dinámico del sitio. Para conectarlo a un backend:
+El archivo [`src/data/gameData.js`](./src/data/gameData.js) concentra todo el contenido dinámico del sitio. Para conectarlo a un backend:
 
 ```javascript
 // Ejemplo de conexión a endpoint de Next.js /api/ignis/content
