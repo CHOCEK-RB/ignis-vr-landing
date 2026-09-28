@@ -64,20 +64,7 @@
         {/each}
       </nav>
 
-      <!-- Botón CTA Desktop -->
-      <div class="hidden md:flex items-center gap-4">
-        <a
-          href="#descarga"
-          class="relative inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl overflow-hidden shadow-md shadow-orange-600/30 hover:shadow-orange-500/60 hover:scale-105 active:scale-95 border border-orange-400/40"
-        >
-          <span class="relative z-10 flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-            </svg>
-            Demo VR
-          </span>
-        </a>
-      </div>
+
 
       <!-- Botón Hamburguesa Móvil -->
       <div class="flex md:hidden">
@@ -117,18 +104,7 @@
             {link.label}
           </a>
         {/each}
-        <div class="pt-3 mt-2 border-t border-slate-800">
-          <a
-            href="#descarga"
-            onclick={closeMobileMenu}
-            class="w-full flex items-center justify-center gap-2 py-3 px-4 text-center font-bold text-white bg-gradient-to-r from-orange-600 to-red-600 rounded-xl shadow-lg shadow-orange-600/30"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-            </svg>
-            Jugar Demo VR Gratis
-          </a>
-        </div>
+
       </div>
     </div>
   {/if}

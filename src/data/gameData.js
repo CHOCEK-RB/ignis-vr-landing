@@ -17,7 +17,6 @@ export const gameInfo = {
   engine: "Unity 6 (6000.6.0f1) · URP 17.6",
   platform: "Meta Quest 2 (Android Standalone APK) · OpenXR",
   developer: "Equipo IGNIS (IHC)",
-  demoLink: "#descarga",
   trailerLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   badgeText: "Boss Rush VR en Meta Quest 2 · Unity 6",
 };

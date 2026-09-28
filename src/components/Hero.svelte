@@ -112,31 +112,15 @@
           {gameInfo.synopsis}
         </p>
 
-        <!-- Call to Actions -->
+        <!-- Botón de Exploración de Documentación -->
         <div class="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
           <a
-            href="#descarga"
+            href="#combate"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-white bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 rounded-2xl shadow-xl shadow-orange-600/40 hover:shadow-orange-500/70 hover:scale-105 active:scale-95 transition-all duration-300 border border-orange-400/50 group"
           >
-            <svg class="w-5 h-5 text-yellow-300 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C10.5 4.5 9 6.5 9 9.5C9 10.8 9.5 12 10.3 12.9C8.3 12.1 7 10.2 7 8C5 10 4 12.8 4 15.5C4 19.1 7.1 22 11 22C16 22 19 18.5 19 14.5C19 9.5 15.5 6 12 2Z"/>
-            </svg>
-            <span>Descargar Demo VR</span>
+            <span>Ver Documentación de Combate & IA</span>
+            <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
           </a>
-
-          <!-- Opción 'Ver GamePlay Trailer' comentada a solicitud del usuario
-          <button
-            type="button"
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 text-base font-bold text-slate-200 bg-[#121826]/80 hover:bg-[#1a2337] rounded-2xl border border-slate-700 hover:border-orange-500/50 shadow-md transition-all duration-300 hover:scale-105 active:scale-95 group"
-          >
-            <div class="w-7 h-7 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-colors">
-              <svg class="w-3.5 h-3.5 fill-current ml-0.5" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-            <span>Ver Gameplay Trailer</span>
-          </button>
-          -->
         </div>
 
         <!-- Badges técnicos / Plataformas -->

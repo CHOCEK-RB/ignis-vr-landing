@@ -36,14 +36,15 @@ pagina_web/
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.svelte            # Navegación fija con efecto blur y menú móvil
-│   │   ├── Hero.svelte              # Portada épica con brasas flotantes y trailer modal
+│   │   ├── Hero.svelte              # Portada épica de documentación con brasas flotantes
+│   │   ├── BossCombat.svelte        # Fases de color, cuarteto de ataques de Sahur y voces
 │   │   ├── IdeationProcess.svelte   # Proceso de ideación en 4 etapas con evidencias Miro
-│   │   ├── Story.svelte             # Lore interactivo con paneles y mecánicas cromáticas
-│   │   ├── Characters.svelte        # Grid 3D de modelos, personajes y arsenal táctico
+│   │   ├── Story.svelte             # Lore interactivo con paneles de cómic
+│   │   ├── Characters.svelte        # Modelos 3D, personajes y arsenal balístico
+│   │   ├── LifeAnalogies.svelte     # 7 lecturas y analogías simbólicas para la vida
 │   │   ├── Gallery.svelte           # Galería in-game estilo masonry con visor lightbox
-│   │   ├── Testimonials.svelte      # Reseñas con pestaña flotante de fotos con óculos VR
-│   │   ├── Specs.svelte             # Compatibilidad de visores (Quest, PSVR2, SteamVR)
-│   │   └── Footer.svelte            # Enlaces sociales, contacto y suscripción a la beta
+│   │   ├── Testimonials.svelte      # Playtesting con pestaña de fotos con óculos VR
+│   │   └── Specs.svelte             # Requisitos técnicos Meta Quest 2 Standalone & Unity 6
 │   ├── data/
 │   │   └── gameData.js              # Modelo de datos desacoplado (listo para API / backend)
 │   ├── app.css                      # Estilos con Tailwind CSS y tokens de diseño
