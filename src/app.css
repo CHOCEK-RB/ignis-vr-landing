@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Rajdhani', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --color-bg-dark: #07090e;
+    --color-bg-surface: #0f141f;
+    --color-bg-card: #141b29;
+    --color-card-border: rgba(255, 110, 20, 0.18);
+    
+    --color-ember-primary: #ff4d00;
+    --color-ember-hover: #ff661a;
+    --color-flame-yellow: #ffb703;
+    --color-flame-cyan: #00f0ff;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-dark);
+    color: #e2e8f0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: 0.03em;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090c12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff4500, #ff8c00);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff6a00, #ffa200);
+  }
+}
+
+/* Glassmorphism and specialized glow effects */
+.glass-panel {
+  background: rgba(15, 20, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 115, 0, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 115, 0, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(255, 69, 0, 0.25);
+}
+
+.fire-text-glow {
+  text-shadow: 0 0 25px rgba(255, 77, 0, 0.6), 0 0 50px rgba(255, 140, 0, 0.3);
+}
+
+.fire-box-glow {
+  box-shadow: 0 0 35px -5px rgba(255, 69, 0, 0.45);
+}
+
+.fire-box-glow-sm {
+  box-shadow: 0 0 20px -3px rgba(255, 69, 0, 0.35);
+}
+
+.cyan-box-glow {
+  box-shadow: 0 0 30px -5px rgba(0, 240, 255, 0.35);
+}
+
+/* Keyframes for ambient fire and ember animations */
+@keyframes flameFlicker {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.4)); }
+  50% { filter: drop-shadow(0 0 30px rgba(255, 140, 0, 0.7)); }
+}
+
+@keyframes floatEmber {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(-80px) rotate(45deg); opacity: 0; }
+}
+
+.animate-flame-flicker {
+  animation: flameFlicker 3.5s infinite ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.8s infinite ease-in-out;
+}
