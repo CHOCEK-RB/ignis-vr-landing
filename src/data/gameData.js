@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.BASE_URL || "/";
+
 /**
  * Datos del juego IGNIS - Realidad Virtual
  * Diseñado con arquitectura modular desacoplada para facilitar integración
@@ -31,7 +33,7 @@ export const ideationProcess = [
     subtitle: "Divergencia creativa, exploración de conceptos VR y propuestas del equipo",
     badge: "Etapa 1: Lluvia de Ideas",
     tag: "Brainstorming Inicial",
-    image: "/pictures/mirro/lluvia_ideas.png",
+    image: `${BASE_URL}pictures/mirro/lluvia_ideas.png`,
     color: "#f59e0b",
     accentColor: "border-amber-500/40 text-amber-400 bg-amber-500/10",
     gradient: "from-amber-500/20 via-orange-600/10 to-transparent",
@@ -117,7 +119,7 @@ export const ideationProcess = [
     subtitle: "Convergencia hacia el combate táctico: Bombero VS Monstruo de Fuego",
     badge: "Etapa 2: Selección del Concepto",
     tag: "Concepto Nuclear",
-    image: "/pictures/mirro/seleccion.png",
+    image: `${BASE_URL}pictures/mirro/seleccion.png`,
     color: "#06b6d4",
     accentColor: "border-cyan-500/40 text-cyan-400 bg-cyan-500/10",
     gradient: "from-cyan-500/20 via-blue-600/10 to-transparent",
@@ -150,7 +152,7 @@ export const ideationProcess = [
     subtitle: "Mecánicas de combate, comportamiento hostil y condición de victoria",
     badge: "Etapa 3: Reglas y Lógica de Juego",
     tag: "Sistemas & Gameplay",
-    image: "/pictures/mirro/funcionalidad.png",
+    image: `${BASE_URL}pictures/mirro/funcionalidad.png`,
     color: "#f97316",
     accentColor: "border-orange-500/40 text-orange-400 bg-orange-500/10",
     gradient: "from-orange-500/20 via-red-600/10 to-transparent",
@@ -223,7 +225,7 @@ export const ideationProcess = [
     subtitle: "Mapeo cinético y corporal entre el jugador y el entorno virtual",
     badge: "Etapa 4: Experiencia Kinestésica",
     tag: "Room-Scale & Mandos",
-    image: "/pictures/mirro/iteraccion.png",
+    image: `${BASE_URL}pictures/mirro/iteraccion.png`,
     color: "#ef4444",
     accentColor: "border-red-500/40 text-red-400 bg-red-500/10",
     gradient: "from-red-600/20 via-orange-600/10 to-transparent",
@@ -276,98 +278,98 @@ export const ideationProcess = [
 export const allStoryPanels = [
   {
     id: 1,
-    image: "/pictures/paneles/panel_01.png",
+    image: `${BASE_URL}pictures/paneles/panel_01.png`,
     title: "Entrada y Protocolo",
     caption: "Carlos ingresa al cuarto con su mochila de agua y manguera roja. Cierra la puerta metálica tras de sí según el protocolo. Frente a él arde una llama roja solitaria.",
     tag: "Protocolo Estándar",
   },
   {
     id: 2,
-    image: "/pictures/paneles/panel_02.png",
+    image: `${BASE_URL}pictures/paneles/panel_02.png`,
     title: "El Primer Disparo",
     caption: "Confiado en que es un fuego común, Carlos levanta la manguera y le arroja un chorro de agua directo a la pequeña llama.",
     tag: "Ataque Inicial",
   },
   {
     id: 3,
-    image: "/pictures/paneles/panel_03.png",
+    image: `${BASE_URL}pictures/paneles/panel_03.png`,
     title: "La Chispa que Habla",
     caption: "«¡Auch! Eso me dolió». La puerta metálica se sella con un golpe seco. La flama crece violentamente hasta convertirse en un titán de fuego amarillo incandescente.",
     tag: "Mutación y Trampa",
   },
   {
     id: 4,
-    image: "/pictures/paneles/panel_04.png",
+    image: `${BASE_URL}pictures/paneles/panel_04.png`,
     title: "El Agua Sin Efecto",
     caption: "Carlos descarga agua una y otra vez, pero el agua resbala sin dañarlo. El monstruo amarillo se ríe a carcajadas de su impotencia.",
     tag: "Inmunidad Amarilla",
   },
   {
     id: 5,
-    image: "/pictures/paneles/panel_05.png",
+    image: `${BASE_URL}pictures/paneles/panel_05.png`,
     title: "Esquiva Física a Ras de Pecho",
     caption: "El titán gira sobre sí mismo desatando una llamarada horizontal devastadora. Carlos debe agacharse velozmente en su espacio VR para no ser alcanzado.",
     tag: "Ducking en VR",
   },
   {
     id: 6,
-    image: "/pictures/paneles/panel_06.png",
+    image: `${BASE_URL}pictures/paneles/panel_06.png`,
     title: "La Conexión de Color",
     caption: "Carlos inspecciona el cuarto y descubre el extintor amarillo colgado en la pared. Una idea surge: el monstruo es amarillo, el extintor es amarillo.",
     tag: "Lectura Táctica",
   },
   {
     id: 7,
-    image: "/pictures/paneles/panel_07.png",
+    image: `${BASE_URL}pictures/paneles/panel_07.png`,
     title: "Descarga de Espuma Química",
     caption: "Toma el extintor amarillo, retira el seguro y descarga la espuma sobre la criatura. El monstruo brama de dolor: «¡KRRH! ¡OW! ¡OW!»",
     tag: "Golpe Crítico",
   },
   {
     id: 8,
-    image: "/pictures/paneles/panel_08.png",
+    image: `${BASE_URL}pictures/paneles/panel_08.png`,
     title: "Cambio Cromático: Amarillo a Rojo",
     caption: "El impacto debilita al coloso y su cuerpo cambia súbitamente de color: la coraza amarilla se tiñe de un rojo ardiente.",
     tag: "Transición de Fase",
   },
   {
     id: 9,
-    image: "/pictures/paneles/panel_09.png",
+    image: `${BASE_URL}pictures/paneles/panel_09.png`,
     title: "Descifrando el Patrón",
     caption: "El extintor ya no surte efecto contra el rojo. Carlos ata cabos y suelta el extintor para volver a empuñar la manguera roja de agua.",
     tag: "Estrategia Elemental",
   },
   {
     id: 10,
-    image: "/pictures/paneles/panel_10.png",
+    image: `${BASE_URL}pictures/paneles/panel_10.png`,
     title: "Chorro a Presión y Charcos de Lava",
     caption: "Carlos dispara agua fría a presión contra el cuerpo rojo mientras cuida cada paso para no pisar los charcos de fuego hirvientes que queman sus botas.",
     tag: "Peligro en el Suelo",
   },
   {
     id: 11,
-    image: "/pictures/paneles/panel_11.png",
+    image: `${BASE_URL}pictures/paneles/panel_11.png`,
     title: "Ataque de Humo y Desorientación",
     caption: "El monstruo se vuelve de color azul y tose una densa nube de humo negro que nubla los visores VR por completo, obligando a aguantar a ciegas.",
     tag: "Visión Reducida",
   },
   {
     id: 12,
-    image: "/pictures/paneles/panel_12.png",
+    image: `${BASE_URL}pictures/paneles/panel_12.png`,
     title: "Sofocación con Sacos de Arena",
     caption: "Al volverse azul el monstruo, Carlos agarra un saco azul de arena del suelo y se lo arroja con fuerza, derrotándolo al sofocar su masa ígnea y reduciendo su tamaño.",
     tag: "Física de Arrojo",
   },
   {
     id: 13,
-    image: "/pictures/paneles/panel_13.png",
+    image: `${BASE_URL}pictures/paneles/panel_13.png`,
     title: "El Núcleo Celeste Debilitado",
     caption: "Con la salud a menos del 5%, el monstruo queda reducido a una figura celeste diminuta de rodillas que suplica: «Me apago… tengo frío». Carlos levanta la manguera para el golpe final.",
     tag: "Salud Débil < 5%",
   },
   {
     id: 14,
-    image: "/pictures/paneles/panel_14.png",
+    image: `${BASE_URL}pictures/paneles/panel_14.png`,
     title: "Vapor Blanco y Libertad",
     caption: "Una última descarga disuelve a la criatura en vapor blanco. Los cerrojos de la puerta saltan, el aire fresco de la noche entra y Carlos camina hacia la libertad.",
     tag: "Victoria y Escape",
@@ -495,7 +497,7 @@ export const charactersAndObjects = [
     category: "personaje",
     role: "Protagonista / Traje Ignífugo Nivel 2",
     badge: "Personaje Jugable",
-    image: "/pictures/personajes/bombero.png",
+    image: `${BASE_URL}pictures/personajes/bombero.png`,
     description:
       "Bombero de respuesta rápida asignado a la contención en fábricas. Su equipo ignífugo incluye casco protector con visor, guantes térmicos reforzados y botas dieléctricas para resistir temperaturas extremas y evitar los charcos de fuego en el suelo.",
     stats: [
@@ -511,7 +513,7 @@ export const charactersAndObjects = [
     category: "personaje",
     role: "Entidad Ígnea Principal",
     badge: "Enemigo Dinámico",
-    image: "/pictures/personajes/monstruo.png",
+    image: `${BASE_URL}pictures/personajes/monstruo.png`,
     description:
       "El modelo 3D troncal de la criatura nacida en la fábrica. Con extremidades articuladas y expresión burlona, muta de color y volumen conforme absorbe o pierde temperatura en el enfrentamiento.",
     stats: [
@@ -527,7 +529,7 @@ export const charactersAndObjects = [
     category: "personaje",
     role: "Arena Confinada 3D / Entorno",
     badge: "Escenario 3D",
-    image: "/pictures/personajes/espacio_obj.png",
+    image: `${BASE_URL}pictures/personajes/espacio_obj.png`,
     description:
       "La nave industrial herméticamente cerrada donde se desarrolla el combate. Las paredes de ladrillo refractario, el portón metálico trabado y los puntos de cobertura configuran el espacio de escape room en VR.",
     stats: [
@@ -543,7 +545,7 @@ export const charactersAndObjects = [
     category: "objeto",
     role: "Herramienta Táctica Principal",
     badge: "Arma Hidráulica 3D",
-    image: "/pictures/personajes/manguera_obj.png",
+    image: `${BASE_URL}pictures/personajes/manguera_obj.png`,
     description:
       "Mochila dorsal de agua presurizada con manguera roja de acople rápido. Permite dirigir un chorro continuo de agua mediante gatillo físico con retroalimentación háptica en los mandos VR.",
     stats: [
@@ -559,7 +561,7 @@ export const charactersAndObjects = [
     category: "objeto",
     role: "Disruptor de Coraza Térmica",
     badge: "Extintor 3D",
-    image: "/pictures/personajes/extintor_obj.png",
+    image: `${BASE_URL}pictures/personajes/extintor_obj.png`,
     description:
       "Extintor presurizado de color amarillo colgado en el muro de la nave. Obliga al jugador a desplazarse físicamente en la zona de juego, retirar el pasador con una mano y disparar la espuma con la otra.",
     stats: [
@@ -575,7 +577,7 @@ export const charactersAndObjects = [
     category: "objeto",
     role: "Material de Sofocación Térmica (Azul)",
     badge: "Arrojadizo Azul 3D",
-    image: "/pictures/personajes/saco_azul_obj.png",
+    image: `${BASE_URL}pictures/personajes/saco_azul_obj.png`,
     description:
       "Sacos pesados de contención industrial de color azul esparcidos en el suelo. Requieren agacharse en la vida real, levantarlos con los mandos VR y arrojarlos contra el monstruo en su fase azul para ahogar sus llamas y derrotar su ofensiva de humo.",
     stats: [
@@ -596,7 +598,7 @@ export const charactersAndObjects = [
     category: "etapa",
     role: "Fase 1: Invulnerabilidad Inicial",
     badge: "Etapa del Monstruo",
-    image: "/pictures/etapas_monstruo/amarillo.png",
+    image: `${BASE_URL}pictures/etapas_monstruo/amarillo.png`,
     description:
       "La primera forma colosal del monstruo tras emerger de la pequeña llama. El agua resbala completamente sobre su cuerpo amarillo mientras ríe de Carlos. Debe ser quebrado con la espuma del extintor amarillo.",
     stats: [
@@ -612,7 +614,7 @@ export const charactersAndObjects = [
     category: "etapa",
     role: "Fase 2: Ataque Activo de Llamas",
     badge: "Etapa del Monstruo",
-    image: "/pictures/etapas_monstruo/rojo.png",
+    image: `${BASE_URL}pictures/etapas_monstruo/rojo.png`,
     description:
       "Tras ser quebrado por la espuma, el monstruo vira a rojo intenso. Desata zarpazos giratorios a ras del pecho y proyectiles que dejan charcos de fuego hirvientes en el suelo que dañan las botas al pisarlos.",
     stats: [
@@ -628,7 +630,7 @@ export const charactersAndObjects = [
     category: "etapa",
     role: "Fase 3: Vulnerable a Sacos Azules",
     badge: "Fase Azul (Sacos)",
-    image: "/pictures/etapas_monstruo/azul.png",
+    image: `${BASE_URL}pictures/etapas_monstruo/azul.png`,
     description:
       "Al recibir el chorro de agua fría, el monstruo muta a color azul y expulsa humo negro que nubla el entorno en el visor VR. Su coraza sólo puede ser sofocada y derrotada arrojándole los sacos de arena azul esparcidos por el suelo.",
     stats: [
@@ -650,70 +652,70 @@ export const galleryItems = [
     id: "galeria-01",
     title: "Chorro Hidráulico a Presión",
     caption: "Ataque frontal continuo con la manguera presurizada contra el coloso de fuego en primera persona VR.",
-    src: "/pictures/galeria/p01.png",
+    src: `${BASE_URL}pictures/galeria/p01.png`,
     category: "In-Game VR",
   },
   {
     id: "galeria-02",
     title: "Sofocando Charcos Ardientes",
     caption: "Enfriando el suelo de la fábrica para evitar que las llamas dañen las botas dieléctricas de Carlos.",
-    src: "/pictures/galeria/p02.png",
+    src: `${BASE_URL}pictures/galeria/p02.png`,
     category: "Mecánicas",
   },
   {
     id: "galeria-03",
     title: "Impacto Crítico al Núcleo",
     caption: "Dirigiendo el chorro de agua fría a la coraza ígnea en plena nave industrial cerrada.",
-    src: "/pictures/galeria/p03.png",
+    src: `${BASE_URL}pictures/galeria/p03.png`,
     category: "In-Game VR",
   },
   {
     id: "galeria-04",
     title: "Disparo de Espuma Química",
     caption: "Uso táctico a dos manos del extintor amarillo para quebrar el escudo térmico de la fase inicial.",
-    src: "/pictures/galeria/p04.png",
+    src: `${BASE_URL}pictures/galeria/p04.png`,
     category: "Mecánicas",
   },
   {
     id: "galeria-05",
     title: "Arsenal de Sacos Azules",
     caption: "Sacos de arena azul esparcidos en el piso sobre los charcos de fuego, listos para ser levantados físicamente.",
-    src: "/pictures/galeria/p05.png",
+    src: `${BASE_URL}pictures/galeria/p05.png`,
     category: "Mecánicas",
   },
   {
     id: "galeria-06",
     title: "El Muro Circular de Fuego",
     caption: "El titán desplegando su ofensiva y acorralando al bombero dentro de la barrera de llamas de la sala sellada.",
-    src: "/pictures/galeria/p06.png",
+    src: `${BASE_URL}pictures/galeria/p06.png`,
     category: "Boss Fight",
   },
   {
     id: "galeria-07",
     title: "Reduciendo la Resistencia de Ignis",
     caption: "El coloso empieza a encogerse y perder volumen ante la persistente ráfaga de enfriamiento continuo.",
-    src: "/pictures/galeria/p07.png",
+    src: `${BASE_URL}pictures/galeria/p07.png`,
     category: "Boss Fight",
   },
   {
     id: "galeria-08",
     title: "Control del Espacio y Visión VR",
     caption: "Navegación espacial táctica entre los focos ardientes y los sacos pesados de arena azul.",
-    src: "/pictures/galeria/p08.png",
+    src: `${BASE_URL}pictures/galeria/p08.png`,
     category: "In-Game VR",
   },
   {
     id: "galeria-09",
     title: "Ignis: Fase Amarilla Colosal",
     caption: "La intimidante postura del monstruo riéndose de los ataques de agua antes de activar el extintor químico.",
-    src: "/pictures/galeria/p09.png",
+    src: `${BASE_URL}pictures/galeria/p09.png`,
     category: "Boss Fight",
   },
   {
     id: "galeria-10",
     title: "El Desenlace: Núcleo Debilitado",
     caption: "La entidad reducida a una pequeña silueta de rodillas que susurra «Me apago… tengo frío» antes de disolverse.",
-    src: "/pictures/galeria/p10.png",
+    src: `${BASE_URL}pictures/galeria/p10.png`,
     category: "Boss Fight",
   },
 ];
@@ -733,7 +735,7 @@ export const experienciaJugadores = [
       "Mejora en efectos de sonido del monstruo",
       "Ajuste en tiempos de retirada del enemigo"
     ],
-    folderPath: "/pictures/experiencia/p1/",
+    folderPath: `${BASE_URL}pictures/experiencia/p1/`,
     imagenes: ["1.jpg", "2.jpg", "3.jpg"]
   },
   {
@@ -747,7 +749,7 @@ export const experienciaJugadores = [
       "Clarificación del indicador de vida",
       "Necesidad de mayor amenaza y movilidad"
     ],
-    folderPath: "/pictures/experiencia/p2/",
+    folderPath: `${BASE_URL}pictures/experiencia/p2/`,
     imagenes: ["1.jpg", "2.jpg", "3.jpg"]
   },
   {
@@ -761,7 +763,7 @@ export const experienciaJugadores = [
       "Comprensión progresiva por colores y objetos",
       "Dificultad con controles de agarre y lanzamiento"
     ],
-    folderPath: "/pictures/experiencia/p3/",
+    folderPath: `${BASE_URL}pictures/experiencia/p3/`,
     imagenes: ["1.jpg", "2.jpg", "3.jpg"]
   }
 ];

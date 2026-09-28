@@ -18,7 +18,7 @@
     {
       id: 'manguera',
       label: 'Manguera de Agua',
-      image: '/pictures/parte_01/manguera.png',
+      image: `${import.meta.env.BASE_URL}pictures/parte_01/manguera.png`,
       alt: 'Jugador usando la manguera de agua en primera persona VR',
       phaseText: 'HERRAMIENTA: MANGUERA DE AGUA',
       color: 'text-red-400 border-red-500/40 bg-red-950/40',
@@ -29,7 +29,7 @@
     {
       id: 'extintor',
       label: 'Extintor Químico',
-      image: '/pictures/parte_01/extintor.png',
+      image: `${import.meta.env.BASE_URL}pictures/parte_01/extintor.png`,
       alt: 'Jugador descargando espuma química con el extintor amarillo en VR',
       phaseText: 'HERRAMIENTA: EXTINTOR QUÍMICO',
       color: 'text-yellow-400 border-yellow-500/40 bg-yellow-950/40',
@@ -40,7 +40,7 @@
     {
       id: 'arena',
       label: 'Saco de Arena Azul',
-      image: '/pictures/parte_01/saco_azul.png',
+      image: `${import.meta.env.BASE_URL}pictures/parte_01/saco_azul.png`,
       alt: 'Jugador sosteniendo el saco de arena azul para sofocar el fuego en VR',
       phaseText: 'HERRAMIENTA: SACO DE ARENA AZUL',
       color: 'text-blue-400 border-blue-500/40 bg-blue-950/40',
