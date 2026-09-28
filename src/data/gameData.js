@@ -8,17 +8,18 @@ const BASE_URL = import.meta.env.BASE_URL || "/";
 
 export const gameInfo = {
   title: "IGNIS",
-  subtitle: "El bombero y el monstruo de fuego",
-  tagline: "El fuego tiene voz. La rutina ha terminado.",
+  subtitle: "El Despertar de SAHUR",
+  tagline: "El fuego tiene voz y se burla de ti. Apágalo, encógelo y hazlo ascender.",
   synopsis:
-    "Una llamada rutinaria en una fábrica industrial cerrada se transforma en una experiencia claustrofóbica y táctica de Realidad Virtual. Encerrado junto a una entidad ígnea viviente que muta de forma y color, deberás esquivar zarpazos a ras del pecho, cuidar dónde pisas y alternar entre agua, espuma de extintor y arena para sobrevivir.",
+    "Un bombero en Realidad Virtual entra a apagar una llama central en un almacén cerrado. Al extinguirla despierta a SAHUR (Tung Tung Tung Sahur), un jefe burlón de madera y fuego que solo recibe daño del arma del color que muestra (rojo: agua, amarillo: extintor, azul: saco de arena). Con cada acierto se encoge un 10% y su voz sube de tono hasta ascender al cielo en gloria dorada.",
   releaseYear: "2026",
-  genre: "Acción Táctica VR / Supervivencia / Boss-Fight",
-  engine: "Unity VR / OpenXR",
-  developer: "Ignis Interactive",
+  genre: "Acción en primera persona / Boss rush VR cómico",
+  engine: "Unity 6 (6000.6.0f1) · URP 17.6",
+  platform: "Meta Quest 2 (Android Standalone APK) · OpenXR",
+  developer: "Equipo IGNIS (IHC)",
   demoLink: "#descarga",
   trailerLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  badgeText: "Experiencia VR Room-Scale Inmersiva",
+  badgeText: "Boss Rush VR en Meta Quest 2 · Unity 6",
 };
 
 /**
@@ -768,59 +769,257 @@ export const experienciaJugadores = [
   }
 ];
 
+
+/**
+ * Reglas de Combate Cromático Oficiales (IGNIS)
+ * El jefe solo recibe daño si el arma coincide con el color actual. Nunca repite color seguido.
+ */
+export const colorCombatRules = [
+  {
+    phase: "Fase Roja",
+    color: "#ef4444",
+    rgb: "RGB(1, 0.02, 0.02)",
+    weapon: "Manguera de Agua (Mochila SCBA)",
+    requirement: "3.5 s continuos de chorro balístico",
+    desc: "Manguera de goma física con chorro balístico con gravedad (1.35). Alcance de 3.5m (hasta 4.8m bombeando). Apaga charcos de fuego en el suelo (2.0s) y disipa humo (1.5s).",
+    ammo: "Infinita",
+    icon: "💧",
+  },
+  {
+    phase: "Fase Amarilla",
+    color: "#eab308",
+    rgb: "RGB(1, 0.92, 0.02)",
+    weapon: "Extintor de Espuma Química",
+    requirement: "3.5 s continuos de espuma presurizada",
+    desc: "Extintor de corto alcance (3.2m con SphereCast radio 0.40m y cono de 13°). Genera hasta 45 manchas persistentes de espuma que duran 8.5s en superficies y en el cuerpo del jefe.",
+    ammo: "Infinita",
+    icon: "🧯",
+  },
+  {
+    phase: "Fase Azul",
+    color: "#3b82f6",
+    rgb: "RGB(0.12, 0.45, 1.0)",
+    weapon: "Saco de Arena Azul (6.0 kg)",
+    requirement: "1 solo impacto válido lanzado (> 0.6 m/s)",
+    desc: "Sacos azules esparcidos en el almacén. Se agarran con asistencia (radio 0.70m). Al soltarlos, se promedia la velocidad de los últimos 6 frames x1.5 para un lanzamiento natural. 3 fases garantizadas.",
+    ammo: "Limitada (3 sacos)",
+    icon: "📦",
+  },
+];
+
+/**
+ * Patrón oficial de Ataques y Comportamiento de SAHUR (Tung Tung Tung Sahur)
+ */
+export const sahurBossMechanics = {
+  bossName: "SAHUR",
+  alias: "Tung Tung Tung Sahur",
+  heightEmergence: "Emerge del suelo de Y = -1.6m a Y = 2.38m en 2.5s",
+  scaleRule: "Encoge un 10% (x0.9) por cada fase superada (8 fases en total -> 43% de su tamaño)",
+  voicePitch: "+8% de tono acumulativo por fase (efecto ardilla/helio)",
+  ascension: "Al caer en la fase 8, asciende 9 metros al cielo con resplandor dorado y luz runtime de 14m",
+  defeatQuote: "Ya me dio sueñito… cinco minutos más, mami… zzz…",
+  attacks: [
+    {
+      id: "throw-flames",
+      name: "Lanzar Llamas (Throw_Flames)",
+      clip: "thung_throw_flames (1.57s)",
+      desc: "Dispara 3 bolas de fuego en abanico (flanco izquierdo, centro y derecho). Al impactar generan charcos ardientes en el suelo de concreto.",
+      damage: "15 daño directo/salpicadura (radio 1.35m) + 10 daño cada 0.5s por charco",
+      counter: "Moverse lateralmente y apagar los charcos con agua (2.0s continuo).",
+      icon: "🔥",
+      tag: "Proyectiles & Área",
+    },
+    {
+      id: "spin-fireball",
+      name: "Aro Expansivo (Spin_Fireball)",
+      clip: "thung_spin_fireball (3.97s)",
+      desc: "Onda circular horizontal de fuego a la altura del pecho que barre la sala entera (radio máx. 7m, grosor vertical 0.45m).",
+      damage: "35 de daño directo",
+      counter: "Agacharse físicamente en VR (ducking real) o dar un salto asistido (0.9m de altura).",
+      icon: "⭕",
+      tag: "Evasión Vertical",
+    },
+    {
+      id: "jump-slam",
+      name: "Salto Aplastante (thung_jump)",
+      clip: "thung_jump (1.97s)",
+      desc: "El jefe salta en parábola (arco de 2.5m) hacia uno de los 5 waypoints y desata una onda sísmica de 3.5m al aterrizar.",
+      damage: "25 de daño por onda sísmica",
+      counter: "Monitorear su trayectoria aérea y alejarse del punto de impacto antes de caer.",
+      icon: "💥",
+      tag: "Impacto Sísmico",
+    },
+    {
+      id: "smoke-cloud",
+      name: "Zona de Humo (thung_inflate)",
+      clip: "thung_inflate (3.97s a 1.5x)",
+      desc: "El jefe se infla con brazos abiertos y exhala una nube tóxica (radio 2.5m, 12s duración) que mancha el visor hasta 92% de hollín.",
+      damage: "0 daño a HP; ceguera visual progresiva por hollín",
+      counter: "Limpiar el visor con la mano física (< 0.35m de la cara) o disipar la nube con agua (1.5s).",
+      icon: "💨",
+      tag: "Ceguera & Visor",
+    },
+  ],
+};
+
+/**
+ * Catálogo de Voces Cómicas y Diálogos de SAHUR (25 clips de audio oficiales)
+ */
+export const sahurVoiceQuotes = [
+  {
+    category: "Aparición (Spawn)",
+    quote: "¡¡TUUUNG, TUNG, TUNG, SAHUUUUR!! ¡A levantarse, bombero dormilón! ¡Nadie duerme en este almacén!",
+    context: "Al emerger del piso tras apagar la llama inicial (Y = 2.38m)",
+    icon: "📢",
+  },
+  {
+    category: "Aro de Fuego (Spin)",
+    quote: "¡Tung-tornado mañaneroooo! ¡A saltar la cuerda si no te quieres tostar!",
+    context: "Durante el giro del aro horizontal de fuego",
+    icon: "⭕",
+  },
+  {
+    category: "Lanzar Llamas",
+    quote: "¡Tung, tung! ¡Desayuno caliente a la mesa! ¡Ataja este carbón, que viene con pimienta!",
+    context: "Disparo de 3 proyectiles de fuego",
+    icon: "🔥",
+  },
+  {
+    category: "Salto Aplastante",
+    quote: "¡¡Bomba vaaaa!! ¡Tung desde la tercera cuerda! ¡No te duermas que te aplasto!",
+    context: "Al elevarse y caer sobre el suelo de concreto",
+    icon: "💥",
+  },
+  {
+    category: "Daño por Espuma",
+    quote: "¡Puaaaj, crema de afeitar no! ¡Me pican los ojos! ¡Oye, esto no es jabón para la cara!",
+    context: "Recibiendo chorro de extintor amarillo",
+    icon: "🧯",
+  },
+  {
+    category: "Daño por Saco",
+    quote: "¡Pum! ¡¿Un costalazo en la cara?! ¡Con la comida no se juega! ¡¿Quién dejó ese costal volador?!",
+    context: "Impacto con saco de arena azul lanzado",
+    icon: "📦",
+  },
+  {
+    category: "Encogimiento (-10%)",
+    quote: "¡Oigan! ¿Por qué el techo está más alto? ¡Sigo siendo peligroso, eh! ¡No me achico, solo me concentro!",
+    context: "Transición de escala x0.9 con voz +8% más aguda",
+    icon: "📉",
+  },
+  {
+    category: "Derrota y Ascensión",
+    quote: "Ya me dio sueñito… cinco minutos más, mami… zzz… Se me apagó la mecha… me voy a dormir la siesta…",
+    context: "Flotando 9m al cielo rodeado de luz dorada en runtime",
+    icon: "✨",
+  },
+];
+
+/**
+ * 7 Analogías para la Vida extraídas del diseño de IGNIS (12-analogias-vida.md)
+ */
+export const lifeAnalogies = [
+  {
+    number: "01",
+    title: "Apagar el incendio no es el final, es la puerta",
+    lesson: "Extinguir la llama central parecía el objetivo, pero despierta a SAHUR. Resolver el síntoma visible solo revela el verdadero reto de fondo.",
+    icon: "🚪",
+  },
+  {
+    number: "02",
+    title: "Cada color pide su herramienta",
+    lesson: "SAHUR es inmune a todo salvo al arma de su color. Insistir con la manguera cuando el problema pide arena no es perseverancia, es terquedad.",
+    icon: "🎯",
+  },
+  {
+    number: "03",
+    title: "Los problemas encogen cuando los golpeas bien",
+    lesson: "Cada acierto reduce al jefe un 10%. Ocho golpes certeros lo dejan a menos de la mitad. La constancia metodológica compone resultados.",
+    icon: "📉",
+  },
+  {
+    number: "04",
+    title: "El hollín del visor se limpia a mano",
+    lesson: "El humo no te quita vida, te quita visión. No se disipa esperando: hay que parar y limpiarse el visor con las manos para recuperar la claridad.",
+    icon: "🧤",
+  },
+  {
+    number: "05",
+    title: "Esquivar cambiando de perspectiva",
+    lesson: "El aro de fuego no se bloquea; se esquiva saltando o agachándose. Hay problemas que exigen cambiar de altura o de ángulo en el momento exacto.",
+    icon: "🛡️",
+  },
+  {
+    number: "06",
+    title: "Limpiar los charcos que dejas atrás",
+    lesson: "Esquivar el proyectil no basta si los charcos siguen quemando el piso. Resolver los efectos secundarios es parte obligatoria del avance.",
+    icon: "💧",
+  },
+  {
+    number: "07",
+    title: "El jefe se burla mientras encoge",
+    lesson: "El ego de los problemas suele chillar más fuerte y agudo justo cuando están perdiendo poder. No te distraigas con la burla: sigue el proceso.",
+    icon: "🗣️",
+  },
+];
+
 export const supportedHeadsets = [
   {
-    name: "Meta Quest 3, 2 & Pro",
-    badge: "Standalone / PCVR",
-    description: "Soporte nativo con tracking de manos y Room-Scale a 90/120 Hz.",
+    name: "Meta Quest 2",
+    badge: "Plataforma Principal (Nativo)",
+    description: "Target oficial compilado en APK Android Standalone con OpenXR 1.18.0 y XR Interaction Toolkit 3.6.1 a 90 Hz.",
     icon: "quest",
   },
   {
-    name: "PlayStation VR2",
-    badge: "PS5",
-    description: "Gatillos adaptativos, vibración háptica en el casco y renderizado foveado.",
-    icon: "psvr",
+    name: "Meta Quest 3 & Pro",
+    badge: "Retrocompatible",
+    description: "Ejecución fluida standalone con tracking de mandos Touch Pro / Plus y room-scale completo.",
+    icon: "quest",
   },
   {
-    name: "SteamVR / PCVR",
-    badge: "Valve Index & Vive",
-    description: "Resolución sin compresión y retroceso de mando ultra preciso.",
+    name: "Unity 6 Editor (PC Test)",
+    badge: "Modo Prueba / Debug",
+    description: "Modo teclado/ratón en Editor con teclas K (derrota forzada) y G (vista previa ascensión celestial).",
     icon: "steam",
   },
   {
-    name: "Pico 4 & 4 Pro",
-    badge: "Standalone",
-    description: "Lentes pancake ultra nítidas con amplio campo de visión de 105°.",
-    icon: "pico",
+    name: "OpenXR Standalone / PCVR",
+    badge: "Universal Render Pipeline",
+    description: "Desarrollado sobre Unity 6000.6.0f1 y URP 17.6.0 optimizado para hardware móvil XR.",
+    icon: "psvr",
   },
 ];
 
 export const systemSpecs = {
   minimum: {
-    os: "Windows 10 64-bit",
-    processor: "Intel Core i5-8400 / AMD Ryzen 5 2600",
-    memory: "12 GB de RAM",
-    graphics: "NVIDIA GeForce GTX 1070 (8 GB) / AMD RX 5600 XT",
-    storage: "15 GB de espacio disponible (SSD recomendado)",
-    vrPlayArea: "Room-Scale mínimo de 2m × 1.5m",
+    os: "Meta Quest OS / Android (Quest 2 Standalone)",
+    processor: "Qualcomm Snapdragon XR2 Gen 1 (Quest 2)",
+    memory: "6 GB RAM LPDDR4X",
+    graphics: "Adreno 650 (URP 17.6.0 / Vulkan & GLES3)",
+    storage: "Instalación directa APK Standalone",
+    vrPlayArea: "Room-Scale recomendado de 2.0m × 2.0m libre de tropiezos",
   },
   recommended: {
-    os: "Windows 11 64-bit",
-    processor: "Intel Core i7-11700K / AMD Ryzen 7 5800X",
+    os: "Unity 6000.6.0f1 Editor (PC de Desarrollo / Pruebas)",
+    processor: "Intel Core i7-10700K / AMD Ryzen 7 5700X o superior",
     memory: "16 GB de RAM",
-    graphics: "NVIDIA GeForce RTX 3070 (8 GB) / RTX 4070 o superior",
-    storage: "15 GB en SSD NVMe ultrarrápido",
-    vrPlayArea: "Room-Scale óptimo de 2.5m × 2.5m libre de obstáculos",
+    graphics: "NVIDIA GeForce RTX 3060 / 3070 o superior",
+    storage: "SSD NVMe para tiempos de carga inmediatos",
+    vrPlayArea: "Área con espacio para ducking físico y salto asistido (0.9m)",
   },
 };
 
 export const navLinks = [
   { label: "Inicio", href: "#hero" },
-  { label: "Ideación & Proceso", href: "#proceso" },
-  { label: "Historia (Lore)", href: "#historia" },
-  { label: "Personajes y Equipo", href: "#personajes" },
+  { label: "Combate & Sahur", href: "#combate" },
+  { label: "Ideación", href: "#proceso" },
+  { label: "Lore", href: "#historia" },
+  { label: "Arsenal & 3D", href: "#personajes" },
+  { label: "Analogías", href: "#analogias" },
   { label: "Galería", href: "#galeria" },
-  { label: "Opiniones VR", href: "#testimonios" },
+  { label: "Playtesting", href: "#testimonios" },
+  { label: "Specs", href: "#specs" },
 ];
 
 export const socialLinks = [

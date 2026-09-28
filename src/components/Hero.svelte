@@ -102,9 +102,9 @@
           </span>
         </h1>
 
-        <!-- Eslogan basado en el PDF de Storytelling -->
+        <!-- Eslogan oficial IGNIS -->
         <p class="mt-6 text-lg sm:text-xl text-orange-200/90 font-medium leading-relaxed max-w-2xl border-l-2 border-orange-500/60 pl-4 py-1 bg-gradient-to-r from-orange-500/10 to-transparent">
-          «Una llamada de rutina. Una fábrica sellada tras de ti. Una chispa que habla y se convierte en pesadilla.»
+          «Una llamada de rutina. Un almacén sellado tras de ti. Una llama central que al apagarse despierta a SAHUR.»
         </p>
 
         <!-- Descripción detallada -->

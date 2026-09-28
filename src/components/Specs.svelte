@@ -65,10 +65,10 @@
             type="button"
             onclick={() => (activeTab = 'minimum')}
             class="px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all {activeTab === 'minimum'
-              ? 'bg-slate-700 text-white shadow-sm'
+              ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-sm font-bold'
               : 'text-slate-400 hover:text-white'}"
           >
-            Mínimos
+            Meta Quest 2 (APK Nativo)
           </button>
           <button
             type="button"
@@ -77,7 +77,7 @@
               ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-sm font-bold'
               : 'text-slate-400 hover:text-white'}"
           >
-            Recomendados (90+ FPS)
+            PC / Unity 6 Editor (Modo Test)
           </button>
         </div>
       </div>
@@ -128,11 +128,19 @@
           </div>
         </div>
 
-        <div class="mt-8 p-4 rounded-2xl bg-orange-950/20 border border-orange-500/20 flex items-center gap-3">
-          <span class="text-xl">⚠️</span>
-          <p class="text-xs text-slate-300">
-            <strong class="text-orange-300">Recomendación de seguridad física:</strong> Debido a que el monstruo lanza zarpazos y charcos en el piso, se recomienda un área despejada libre de tropiezos para agacharse y moverse con comodidad.
-          </p>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-orange-950/20 border border-orange-500/20 flex items-center gap-3">
+            <span class="text-xl">⚠️</span>
+            <p class="text-xs text-slate-300">
+              <strong class="text-orange-300">Seguridad física en VR:</strong> Requiere espacio Room-Scale libre de obstáculos para agacharse (ducking) y realizar salto asistido (0.9m) sin colisiones físicas.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/20 flex items-center gap-3">
+            <span class="text-xl">⌨️</span>
+            <p class="text-xs text-slate-300">
+              <strong class="text-cyan-300">Teclas Debug (Modo Editor PC):</strong> Pulsa <kbd class="px-1.5 py-0.5 rounded bg-black/60 font-mono text-cyan-300">K</kbd> para forzar la derrota del jefe o <kbd class="px-1.5 py-0.5 rounded bg-black/60 font-mono text-cyan-300">G</kbd> para previsualizar la ascensión dorada.
+            </p>
+          </div>
         </div>
       </div>
     </div>

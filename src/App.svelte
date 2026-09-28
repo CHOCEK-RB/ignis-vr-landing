@@ -1,11 +1,14 @@
 <script>
   import Navbar from './components/Navbar.svelte';
   import Hero from './components/Hero.svelte';
+  import BossCombat from './components/BossCombat.svelte';
   import IdeationProcess from './components/IdeationProcess.svelte';
   import Story from './components/Story.svelte';
   import Characters from './components/Characters.svelte';
+  import LifeAnalogies from './components/LifeAnalogies.svelte';
   import Gallery from './components/Gallery.svelte';
   import Testimonials from './components/Testimonials.svelte';
+  import Specs from './components/Specs.svelte';
   import Footer from './components/Footer.svelte';
   import { gameInfo } from './data/gameData.js';
 
@@ -28,20 +31,29 @@
   <main class="flex-1">
     <Hero />
 
-    <!-- 2. Proceso de Ideación & Concepción (Pizarras Miro) -->
+    <!-- 2. Combate Táctico, Fases de Color & Ataques de SAHUR -->
+    <BossCombat />
+
+    <!-- 3. Proceso de Ideación & Concepción (Pizarras Miro) -->
     <IdeationProcess />
 
-    <!-- 3. Storytelling & Lore Oficial -->
+    <!-- 4. Storytelling & Lore Oficial -->
     <Story />
 
-    <!-- 3. Personajes y Modelos 3D / Arsenal -->
+    <!-- 5. Personajes, Arsenal y Modelos 3D -->
     <Characters />
 
-    <!-- 4. Galería In-Game Masonry & Carrusel -->
+    <!-- 6. 7 Analogías para la Vida -->
+    <LifeAnalogies />
+
+    <!-- 7. Galería In-Game Masonry & Carrusel -->
     <Gallery />
 
-    <!-- 5. Testimonios y Experiencia de Jugadores VR -->
+    <!-- 8. Testimonios y Experiencia de Jugadores VR -->
     <Testimonials />
+
+    <!-- 9. Compatibilidad y Requisitos Técnicos (Meta Quest 2 & Unity 6) -->
+    <Specs />
 
     <!-- Sección de Descarga Rápida / Llamada a la Acción Final -->
     <section id="descarga" class="relative py-24 bg-gradient-to-b from-[#090d16] via-[#111728] to-[#07090e] overflow-hidden border-t border-orange-500/20">
@@ -49,15 +61,15 @@
 
       <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-950/70 border border-orange-500/40 text-orange-300 text-xs font-bold uppercase tracking-wider mb-6">
-          <span>Acceso Anticipado Disponible</span>
+          <span>Build Oficial Meta Quest 2</span>
         </div>
 
         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-heading uppercase tracking-tight">
-          ¿Listo para <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-amber-300">Enfrentar a Ignis</span>?
+          ¿Listo para <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-amber-300">Enfrentar a SAHUR</span>?
         </h2>
 
         <p class="text-base sm:text-xl text-slate-300 mt-6 max-w-2xl mx-auto leading-relaxed">
-          Ponte el visor, toma la manguera y prepárate para sudar. La fábrica ya cerró sus puertas y el fuego no tendrá piedad.
+          Ponte el visor Meta Quest 2, toma la manguera y prepárate para sudar. El almacén ya cerró sus puertas y Tung Tung Sahur no parará de burlarse.
         </p>
 
         <!-- Botones de Descarga en Plataformas VR -->
