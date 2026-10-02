@@ -17,7 +17,6 @@ export const gameInfo = {
   engine: "Unity 6 (6000.6.0f1) · URP 17.6",
   platform: "Meta Quest 2 (Android Standalone APK) · OpenXR",
   developer: "Equipo IGNIS (IHC)",
-  trailerLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   badgeText: "Boss Rush VR en Meta Quest 2 · Unity 6",
 };
 
@@ -280,14 +279,14 @@ export const allStoryPanels = [
     id: 1,
     image: `${BASE_URL}pictures/paneles/panel_01.png`,
     title: "Entrada y Protocolo",
-    caption: "Carlos ingresa al cuarto con su mochila de agua y manguera roja. Cierra la puerta metálica tras de sí según el protocolo. Frente a él arde una llama roja solitaria.",
+    caption: "El bombero ingresa al cuarto con su mochila de agua y manguera roja. Cierra la puerta metálica tras de sí según el protocolo. Frente a él arde una llama roja solitaria.",
     tag: "Protocolo Estándar",
   },
   {
     id: 2,
     image: `${BASE_URL}pictures/paneles/panel_02.png`,
     title: "El Primer Disparo",
-    caption: "Confiado en que es un fuego común, Carlos levanta la manguera y le arroja un chorro de agua directo a la pequeña llama.",
+    caption: "Confiado en que es un fuego común, el bombero levanta la manguera y le arroja un chorro de agua directo a la pequeña llama.",
     tag: "Ataque Inicial",
   },
   {
@@ -301,21 +300,21 @@ export const allStoryPanels = [
     id: 4,
     image: `${BASE_URL}pictures/paneles/panel_04.png`,
     title: "El Agua Sin Efecto",
-    caption: "Carlos descarga agua una y otra vez, pero el agua resbala sin dañarlo. El monstruo amarillo se ríe a carcajadas de su impotencia.",
+    caption: "El bombero descarga agua una y otra vez, pero el agua resbala sin dañarlo. El monstruo amarillo se ríe a carcajadas de su impotencia.",
     tag: "Inmunidad Amarilla",
   },
   {
     id: 5,
     image: `${BASE_URL}pictures/paneles/panel_05.png`,
     title: "Esquiva Física a Ras de Pecho",
-    caption: "El titán gira sobre sí mismo desatando una llamarada horizontal devastadora. Carlos debe agacharse velozmente en su espacio VR para no ser alcanzado.",
+    caption: "El titán gira sobre sí mismo desatando una llamarada horizontal devastadora. El bombero debe agacharse velozmente en su espacio VR para no ser alcanzado.",
     tag: "Ducking en VR",
   },
   {
     id: 6,
     image: `${BASE_URL}pictures/paneles/panel_06.png`,
     title: "La Conexión de Color",
-    caption: "Carlos inspecciona el cuarto y descubre el extintor amarillo colgado en la pared. Una idea surge: el monstruo es amarillo, el extintor es amarillo.",
+    caption: "El bombero inspecciona el cuarto y descubre el extintor amarillo colgado en la pared. Una idea surge: el monstruo es amarillo, el extintor es amarillo.",
     tag: "Lectura Táctica",
   },
   {
@@ -336,14 +335,14 @@ export const allStoryPanels = [
     id: 9,
     image: `${BASE_URL}pictures/paneles/panel_09.png`,
     title: "Descifrando el Patrón",
-    caption: "El extintor ya no surte efecto contra el rojo. Carlos ata cabos y suelta el extintor para volver a empuñar la manguera roja de agua.",
+    caption: "El extintor ya no surte efecto contra el rojo. El bombero ata cabos y suelta el extintor para volver a empuñar la manguera roja de agua.",
     tag: "Estrategia Elemental",
   },
   {
     id: 10,
     image: `${BASE_URL}pictures/paneles/panel_10.png`,
     title: "Chorro a Presión y Charcos de Lava",
-    caption: "Carlos dispara agua fría a presión contra el cuerpo rojo mientras cuida cada paso para no pisar los charcos de fuego hirvientes que queman sus botas.",
+    caption: "El bombero dispara agua fría a presión contra el cuerpo rojo mientras cuida cada paso para no pisar los charcos de fuego hirvientes que queman sus botas.",
     tag: "Peligro en el Suelo",
   },
   {
@@ -357,21 +356,21 @@ export const allStoryPanels = [
     id: 12,
     image: `${BASE_URL}pictures/paneles/panel_12.png`,
     title: "Sofocación con Sacos de Arena",
-    caption: "Al volverse azul el monstruo, Carlos agarra un saco azul de arena del suelo y se lo arroja con fuerza, derrotándolo al sofocar su masa ígnea y reduciendo su tamaño.",
+    caption: "Al volverse azul el monstruo, el bombero agarra un saco azul de arena del suelo y se lo arroja con fuerza, derrotándolo al sofocar su masa ígnea y reduciendo su tamaño.",
     tag: "Física de Arrojo",
   },
   {
     id: 13,
     image: `${BASE_URL}pictures/paneles/panel_13.png`,
     title: "El Núcleo Celeste Debilitado",
-    caption: "Con la salud a menos del 5%, el monstruo queda reducido a una figura celeste diminuta de rodillas que suplica: «Me apago… tengo frío». Carlos levanta la manguera para el golpe final.",
+    caption: "Con la salud a menos del 5%, el monstruo queda reducido a una figura celeste diminuta de rodillas que suplica: «Me apago… tengo frío». El bombero levanta la manguera para el golpe final.",
     tag: "Salud Débil < 5%",
   },
   {
     id: 14,
     image: `${BASE_URL}pictures/paneles/panel_14.png`,
     title: "Vapor Blanco y Libertad",
-    caption: "Una última descarga disuelve a la criatura en vapor blanco. Los cerrojos de la puerta saltan, el aire fresco de la noche entra y Carlos camina hacia la libertad.",
+    caption: "Una última descarga disuelve a la criatura en vapor blanco. Los cerrojos de la puerta saltan, el aire fresco de la noche entra y el bombero camina hacia la libertad.",
     tag: "Victoria y Escape",
   },
 ];
@@ -385,9 +384,9 @@ export const storyChapters = [
     color: "#ff7700",
     gradient: "from-amber-500/20 via-orange-600/10 to-transparent",
     borderAccent: "border-amber-500/40",
-    badge: "17:42 hrs - Fábrica Central",
+    badge: "17:42 hrs - Almacén Central",
     content:
-      "Carlos llevaba pocos años en el cuerpo de bomberos, pero los suficientes para conocer el compás de una alerta común. Aquella tarde lo enviaron a una fábrica por un incendio en un cuarto interior. Entró con su mochila de agua a la espalda y la manguera roja lista. Siguiendo el protocolo, cerró la puerta metálica tras de sí. Sobre el suelo ardía una pequeña llama roja, inofensiva a simple vista. Levantó la manguera y le lanzó un chorro de agua seguro de que con eso bastaba.",
+      "El bombero llevaba pocos años en el cuerpo de bomberos, pero los suficientes para conocer el compás de una alerta común. Aquella tarde lo enviaron a un almacén por un incendio en un cuarto interior. Entró con su mochila de agua a la espalda y la manguera roja lista. Siguiendo el protocolo, cerró la puerta metálica tras de sí. Sobre el suelo ardía una pequeña llama roja, inofensiva a simple vista. Levantó la manguera y le lanzó un chorro de agua seguro de que con eso bastaba.",
     panels: [allStoryPanels[0], allStoryPanels[1]],
     highlightQuote: "«Entró al cuarto y cerró la puerta tras de sí, como marca el protocolo.»",
   },
@@ -401,7 +400,7 @@ export const storyChapters = [
     borderAccent: "border-yellow-400/40",
     badge: "La Trampa Sellada",
     content:
-      "La llama no se apagó. En su lugar, se sacudió y soltó una voz que heló la sangre de Carlos: «¡Auch! Eso me dolió». Un sonido grave y creciente retumbó en las paredes de ladrillo, la puerta metálica se selló a su espalda con un golpe seco irrevocable, y la pequeña llama comenzó a crecer descontroladamente. En segundos, se alzó un titán enorme hecho de fuego con el cuerpo teñido de un amarillo incandescente. La rutina se había terminado.",
+      "La llama no se apagó. En su lugar, se sacudió y soltó una voz que heló la sangre del bombero: «¡Auch! Eso me dolió». Un sonido grave y creciente retumbó en las muros metálicos, la puerta metálica se selló a su espalda con un golpe seco irrevocable, y la pequeña llama comenzó a crecer descontroladamente. En segundos, se alzó un titán enorme hecho de fuego con el cuerpo teñido de un amarillo incandescente. La rutina se había terminado.",
     panels: [allStoryPanels[2]],
     highlightQuote: "«¡Auch! Eso me dolió. La pequeña llama empezó a crecer en un titán colosal.»",
   },
@@ -415,7 +414,7 @@ export const storyChapters = [
     borderAccent: "border-red-500/40",
     badge: "Inmunidad & Reflejos VR",
     content:
-      "El monstruo se agachó, giró sobre sí mismo y lanzó un golpe de fuego horizontal a la altura del pecho. Carlos apenas alcanzó a esquivarlo agachándose en el acto. Por instinto apuntó la manguera y disparó agua una y otra vez, pero el líquido resbalaba sin causarle el más mínimo efecto al cuerpo amarillo. La bestia soltó una carcajada burlona. Esa risa hizo despertar a Carlos: si el agua no servía, tenía que encontrar otra arma de inmediato.",
+      "El monstruo se agachó, giró sobre sí mismo y lanzó un golpe de fuego horizontal a la altura del pecho. El bombero apenas alcanzó a esquivarlo agachándose en el acto. Por instinto apuntó la manguera y disparó agua una y otra vez, pero el líquido resbalaba sin causarle el más mínimo efecto al cuerpo amarillo. La bestia soltó una carcajada burlona. Esa risa hizo despertar al bombero: si el agua no servía, tenía que encontrar otra arma de inmediato.",
     panels: [allStoryPanels[3], allStoryPanels[4]],
     highlightQuote: "«El agua resbalaba sin efecto sobre el cuerpo amarillo de la criatura mientras se reía.»",
   },
@@ -429,7 +428,7 @@ export const storyChapters = [
     borderAccent: "border-yellow-500/40",
     badge: "Disrupción de Coraza",
     content:
-      "Al mirar a su alrededor, Carlos descubrió que el cuarto no estaba vacío: en la pared colgaba un extintor de color amarillo, y por el piso había sacos de arena azul. Sus ojos se detuvieron en el extintor: amarillo, igual que el monstruo. Corrió hacia él, retiró el seguro y descargó la espesa espuma sobre la criatura. El monstruo gritó de dolor («¡KRRH! ¡OW!») y su coraza cambió drásticamente de amarillo a un rojo encendido.",
+      "Al mirar a su alrededor, el bombero descubrió que el cuarto no estaba vacío: en la pared colgaba un extintor de color amarillo, y por el piso había sacos de arena azul. Sus ojos se detuvieron en el extintor: amarillo, igual que el monstruo. Corrió hacia él, retiró el seguro y descargó la espesa espuma sobre la criatura. El monstruo gritó de dolor («¡KRRH! ¡OW!») y su coraza cambió drásticamente de amarillo a un rojo encendido.",
     panels: [allStoryPanels[5], allStoryPanels[6], allStoryPanels[7]],
     highlightQuote: "«Amarillo, igual que el monstruo. Descargó la espuma y el cuerpo pasó a rojo encendido.»",
   },
@@ -443,7 +442,7 @@ export const storyChapters = [
     borderAccent: "border-blue-500/40",
     badge: "Estrategia Completa",
     content:
-      "Carlos comprendió la regla de oro: cada color exigía una herramienta distinta. Contra el rojo, el extintor era inútil, así que volvió al agua, sorteando los charcos ardientes que la bestia escupía al suelo. Al recibir el agua, el monstruo se volvió azul y tosió una nube de humo negro tan denso que cegó momentáneamente los visores de Carlos. Sin vacilar, Carlos agarró un saco azul de arena del suelo y se lo arrojó con fuerza, derrotando la amenaza sofocando su masa ígnea.",
+      "El bombero comprendió la regla de oro: cada color exigía una herramienta distinta. Contra el rojo, el extintor era inútil, así que volvió al agua, sorteando los charcos ardientes que la bestia escupía al suelo. Al recibir el agua, el monstruo se volvió azul y tosió una nube de humo negro tan denso que cegó momentáneamente los visores del bombero. Sin vacilar, el bombero agarró un saco azul de arena del suelo y se lo arrojó con fuerza, derrotando la amenaza sofocando su masa ígnea.",
     panels: [allStoryPanels[8], allStoryPanels[9], allStoryPanels[10], allStoryPanels[11]],
     highlightQuote: "«El color del monstruo no era un capricho, era la pista. Cada color pedía una herramienta distinta.»",
   },
@@ -457,7 +456,7 @@ export const storyChapters = [
     borderAccent: "border-sky-400/40",
     badge: "Fin de la Emergencia",
     content:
-      "Con cada golpe acertado, la criatura se fue encogiendo. Al final, quedó reducida a una figura celeste, menuda y vacilante, con movimientos lentos y torpes sobre sus rodillas. Carlos levantó la manguera roja y descargó una ráfaga final de agua a presión. «Me apago… tengo frío», murmuró la criatura antes de disolverse en una nube de vapor blanco. La puerta se destrabó, el aire fresco lo recibió y Carlos salió sabiendo que aquel no había sido un incendio de rutina.",
+      "Con cada golpe acertado, la criatura se fue encogiendo. Al final, quedó reducida a una figura celeste, menuda y vacilante, con movimientos lentos y torpes sobre sus rodillas. El bombero levantó la manguera roja y descargó una ráfaga final de agua a presión. «Me apago… tengo frío», murmuró la criatura antes de disolverse en una nube de vapor blanco. La puerta se destrabó, el aire fresco lo recibió y el bombero salió sabiendo que aquel no había sido un incendio de rutina.",
     panels: [allStoryPanels[12], allStoryPanels[13]],
     highlightQuote: "««Me apago… tengo frío», murmuró la figura celeste antes de disolverse en una nube de vapor blanco.»",
   },
@@ -465,26 +464,26 @@ export const storyChapters = [
 
 export const combatMechanics = [
   {
-    phase: "Fase Amarilla",
-    weakness: "Extintor Químico (Espuma)",
-    icon: "🟡",
-    effect: "Quiebra el escudo térmico inicial",
-    accent: "text-yellow-400 border-yellow-500/40 bg-yellow-500/10",
-    weaknessColor: "text-yellow-400",
-  },
-  {
     phase: "Fase Roja",
     weakness: "Manguera de Agua a Presión",
     icon: "🔴",
-    effect: "Enfría la temperatura crítica del núcleo",
+    effect: "Enfría el núcleo: 3,5 s de chorro continuo",
     accent: "text-red-500 border-red-500/40 bg-red-500/10",
     weaknessColor: "text-red-400",
+  },
+  {
+    phase: "Fase Amarilla",
+    weakness: "Extintor Químico (Espuma)",
+    icon: "🟡",
+    effect: "Quiebra el escudo térmico: 3,5 s de espuma",
+    accent: "text-yellow-400 border-yellow-500/40 bg-yellow-500/10",
+    weaknessColor: "text-yellow-400",
   },
   {
     phase: "Fase Azul",
     weakness: "Saco de Arena Azul",
     icon: "🔵",
-    effect: "Sofoca el oxígeno y derriba la coraza ante el humo",
+    effect: "Un impacto directo sofoca su masa ígnea",
     accent: "text-blue-400 border-blue-500/40 bg-blue-500/10",
     weaknessColor: "text-blue-400",
   },
@@ -492,14 +491,14 @@ export const combatMechanics = [
 
 export const charactersAndObjects = [
   {
-    id: "carlos",
-    name: "Carlos (Bombero)",
+    id: "bombero",
+    name: "El Bombero",
     category: "personaje",
     role: "Protagonista / Traje Ignífugo Nivel 2",
     badge: "Personaje Jugable",
     image: `${BASE_URL}pictures/personajes/bombero.png`,
     description:
-      "Bombero de respuesta rápida asignado a la contención en fábricas. Su equipo ignífugo incluye casco protector con visor, guantes térmicos reforzados y botas dieléctricas para resistir temperaturas extremas y evitar los charcos de fuego en el suelo.",
+      "Bombero de respuesta rápida asignado a la contención en almacenes. Su equipo ignífugo incluye casco protector con visor, guantes térmicos reforzados y botas dieléctricas para resistir temperaturas extremas y evitar los charcos de fuego en el suelo.",
     stats: [
       { label: "Movilidad VR", value: "Room-Scale 360°" },
       { label: "Resistencia", value: "Traje Térmico Nivel 2" },
@@ -509,13 +508,13 @@ export const charactersAndObjects = [
   },
   {
     id: "monstruo-base",
-    name: "Ignis (Modelo 3D Base)",
+    name: "SAHUR (Modelo 3D Base)",
     category: "personaje",
     role: "Entidad Ígnea Principal",
     badge: "Enemigo Dinámico",
     image: `${BASE_URL}pictures/personajes/monstruo.png`,
     description:
-      "El modelo 3D troncal de la criatura nacida en la fábrica. Con extremidades articuladas y expresión burlona, muta de color y volumen conforme absorbe o pierde temperatura en el enfrentamiento.",
+      "El modelo 3D troncal de la criatura nacida en el Almacén. Con extremidades articuladas y expresión burlona, muta de color y volumen conforme absorbe o pierde temperatura en el enfrentamiento.",
     stats: [
       { label: "Comportamiento", value: "Burlón, Agresivo y Vocal" },
       { label: "Capacidad", value: "Mutación Cromática de 3 Fases" },
@@ -525,13 +524,13 @@ export const charactersAndObjects = [
   },
   {
     id: "espacio-fabrica",
-    name: "Cuarto Cerrado de la Fábrica",
+    name: "Cuarto Cerrado del Almacén",
     category: "personaje",
     role: "Arena Confinada 3D / Entorno",
     badge: "Escenario 3D",
     image: `${BASE_URL}pictures/personajes/espacio_obj.png`,
     description:
-      "La nave industrial herméticamente cerrada donde se desarrolla el combate. Las paredes de ladrillo refractario, el portón metálico trabado y los puntos de cobertura configuran el espacio de escape room en VR.",
+      "La nave industrial herméticamente cerrada donde se desarrolla el combate. Las muros metálicos corrugados, el portón metálico trabado y los puntos de cobertura configuran el espacio de escape room en VR.",
     stats: [
       { label: "Tipo de Arena", value: "Habitación Sellada Hermética" },
       { label: "Peligro", value: "Humo denso y charcos de fuego" },
@@ -549,7 +548,7 @@ export const charactersAndObjects = [
     description:
       "Mochila dorsal de agua presurizada con manguera roja de acople rápido. Permite dirigir un chorro continuo de agua mediante gatillo físico con retroalimentación háptica en los mandos VR.",
     stats: [
-      { label: "Alcance", value: "8 metros de proyección" },
+      { label: "Alcance", value: "≈ 3,5 m útil · 4,8 m arqueando" },
       { label: "Eficacia", value: "Crítico contra Fase Roja" },
       { label: "Control Háptico", value: "Vibración de retroceso continua" },
     ],
@@ -594,13 +593,13 @@ export const charactersAndObjects = [
   },
   {
     id: "etapa-amarilla",
-    name: "Ignis: Fase Amarilla (Escudo Térmico)",
+    name: "SAHUR: Fase Amarilla (Escudo Térmico)",
     category: "etapa",
     role: "Fase 1: Invulnerabilidad Inicial",
     badge: "Etapa del Monstruo",
     image: `${BASE_URL}pictures/etapas_monstruo/amarillo.png`,
     description:
-      "La primera forma colosal del monstruo tras emerger de la pequeña llama. El agua resbala completamente sobre su cuerpo amarillo mientras ríe de Carlos. Debe ser quebrado con la espuma del extintor amarillo.",
+      "La primera forma colosal del monstruo tras emerger de la pequeña llama. El agua resbala completamente sobre su cuerpo amarillo mientras ríe del bombero. Debe ser quebrado con la espuma del extintor amarillo.",
     stats: [
       { label: "Color / Estado", value: "Amarillo Incandescente" },
       { label: "Inmunidad", value: "Inmune al agua a presión" },
@@ -610,7 +609,7 @@ export const charactersAndObjects = [
   },
   {
     id: "etapa-roja",
-    name: "Ignis: Fase Roja (Furia & Charcos)",
+    name: "SAHUR: Fase Roja (Furia & Charcos)",
     category: "etapa",
     role: "Fase 2: Ataque Activo de Llamas",
     badge: "Etapa del Monstruo",
@@ -626,7 +625,7 @@ export const charactersAndObjects = [
   },
   {
     id: "etapa-azul",
-    name: "Ignis: Fase Azul (Vulnerable a Sacos)",
+    name: "SAHUR: Fase Azul (Vulnerable a Sacos)",
     category: "etapa",
     role: "Fase 3: Vulnerable a Sacos Azules",
     badge: "Fase Azul (Sacos)",
@@ -658,7 +657,7 @@ export const galleryItems = [
   {
     id: "galeria-02",
     title: "Sofocando Charcos Ardientes",
-    caption: "Enfriando el suelo de la fábrica para evitar que las llamas dañen las botas dieléctricas de Carlos.",
+    caption: "Enfriando el suelo del Almacén para evitar que las llamas dañen las botas dieléctricas del bombero.",
     src: `${BASE_URL}pictures/galeria/p02.png`,
     category: "Mecánicas",
   },
@@ -692,7 +691,7 @@ export const galleryItems = [
   },
   {
     id: "galeria-07",
-    title: "Reduciendo la Resistencia de Ignis",
+    title: "Reduciendo la Resistencia de SAHUR",
     caption: "El coloso empieza a encogerse y perder volumen ante la persistente ráfaga de enfriamiento continuo.",
     src: `${BASE_URL}pictures/galeria/p07.png`,
     category: "Boss Fight",
@@ -706,7 +705,7 @@ export const galleryItems = [
   },
   {
     id: "galeria-09",
-    title: "Ignis: Fase Amarilla Colosal",
+    title: "SAHUR: Fase Amarilla Colosal",
     caption: "La intimidante postura del monstruo riéndose de los ataques de agua antes de activar el extintor químico.",
     src: `${BASE_URL}pictures/galeria/p09.png`,
     category: "Boss Fight",
@@ -777,30 +776,27 @@ export const colorCombatRules = [
   {
     phase: "Fase Roja",
     color: "#ef4444",
-    rgb: "RGB(1, 0.02, 0.02)",
-    weapon: "Manguera de Agua (Mochila SCBA)",
-    requirement: "3.5 s continuos de chorro balístico",
-    desc: "Manguera de goma física con chorro balístico con gravedad (1.35). Alcance de 3.5m (hasta 4.8m bombeando). Apaga charcos de fuego en el suelo (2.0s) y disipa humo (1.5s).",
+    weapon: "Manguera de agua",
+    requirement: "3,5 s continuos de chorro balístico",
+    desc: "Manguera de goma física con chorro balístico afectado por la caída. Alcance de 3,5 m (hasta 4,8 m arqueando el chorro). Apaga los charcos del suelo (2,0 s) y disipa el humo (1,5 s).",
     ammo: "Infinita",
     icon: "💧",
   },
   {
     phase: "Fase Amarilla",
     color: "#eab308",
-    rgb: "RGB(1, 0.92, 0.02)",
-    weapon: "Extintor de Espuma Química",
-    requirement: "3.5 s continuos de espuma presurizada",
-    desc: "Extintor de corto alcance (3.2m con SphereCast radio 0.40m y cono de 13°). Genera hasta 45 manchas persistentes de espuma que duran 8.5s en superficies y en el cuerpo del jefe.",
+    weapon: "Extintor de espuma",
+    requirement: "3,5 s continuos de espuma presurizada",
+    desc: "Extintor de corto alcance (3,2 m, cono de 13°). Genera hasta 45 manchas persistentes de espuma que duran 8,5 s sobre las superficies y sobre el cuerpo del jefe.",
     ammo: "Infinita",
     icon: "🧯",
   },
   {
     phase: "Fase Azul",
     color: "#3b82f6",
-    rgb: "RGB(0.12, 0.45, 1.0)",
-    weapon: "Saco de Arena Azul (6.0 kg)",
-    requirement: "1 solo impacto válido lanzado (> 0.6 m/s)",
-    desc: "Sacos azules esparcidos en el almacén. Se agarran con asistencia (radio 0.70m). Al soltarlos, se promedia la velocidad de los últimos 6 frames x1.5 para un lanzamiento natural. 3 fases garantizadas.",
+    weapon: "Saco de arena azul (6,0 kg)",
+    requirement: "1 solo impacto válido lanzado (a más de 0,6 m/s)",
+    desc: "Sacos azules esparcidos por el almacén. Se agarran con asistencia (radio de 0,70 m). Al soltarlos heredan el movimiento real del brazo con un impulso ×1,5. Siempre hay 3 fases de saco garantizadas.",
     ammo: "Limitada (3 sacos)",
     icon: "📦",
   },
@@ -812,16 +808,16 @@ export const colorCombatRules = [
 export const sahurBossMechanics = {
   bossName: "SAHUR",
   alias: "Tung Tung Tung Sahur",
-  heightEmergence: "Emerge del suelo de Y = -1.6m a Y = 2.38m en 2.5s",
-  scaleRule: "Encoge un 10% (x0.9) por cada fase superada (8 fases en total -> 43% de su tamaño)",
+  heightEmergence: "Emerge del suelo y crece hasta su altura completa en 2,5 s",
+  scaleRule: "Encoge un 10 % por cada fase superada: tras las 8 fases conserva el 43 % de su tamaño",
   voicePitch: "+8% de tono acumulativo por fase (efecto ardilla/helio)",
-  ascension: "Al caer en la fase 8, asciende 9 metros al cielo con resplandor dorado y luz runtime de 14m",
+  ascension: "Al caer en la fase 8 asciende 9 metros al cielo con un resplandor dorado de 14 m de alcance",
   defeatQuote: "Ya me dio sueñito… cinco minutos más, mami… zzz…",
   attacks: [
     {
       id: "throw-flames",
-      name: "Lanzar Llamas (Throw_Flames)",
-      clip: "thung_throw_flames (1.57s)",
+      name: "Lanzar llamas",
+      clip: "1,57 s",
       desc: "Dispara 3 bolas de fuego en abanico (flanco izquierdo, centro y derecho). Al impactar generan charcos ardientes en el suelo de concreto.",
       damage: "15 daño directo/salpicadura (radio 1.35m) + 10 daño cada 0.5s por charco",
       counter: "Moverse lateralmente y apagar los charcos con agua (2.0s continuo).",
@@ -830,18 +826,18 @@ export const sahurBossMechanics = {
     },
     {
       id: "spin-fireball",
-      name: "Aro Expansivo (Spin_Fireball)",
-      clip: "thung_spin_fireball (3.97s)",
+      name: "Aro expansivo",
+      clip: "3,97 s",
       desc: "Onda circular horizontal de fuego a la altura del pecho que barre la sala entera (radio máx. 7m, grosor vertical 0.45m).",
-      damage: "35 de daño directo",
+      damage: "25 de daño directo",
       counter: "Agacharse físicamente en VR (ducking real) o dar un salto asistido (0.9m de altura).",
       icon: "⭕",
       tag: "Evasión Vertical",
     },
     {
       id: "jump-slam",
-      name: "Salto Aplastante (thung_jump)",
-      clip: "thung_jump (1.97s)",
+      name: "Salto aplastante",
+      clip: "1,97 s",
       desc: "El jefe salta en parábola (arco de 2.5m) hacia uno de los 5 waypoints y desata una onda sísmica de 3.5m al aterrizar.",
       damage: "25 de daño por onda sísmica",
       counter: "Monitorear su trayectoria aérea y alejarse del punto de impacto antes de caer.",
@@ -850,8 +846,8 @@ export const sahurBossMechanics = {
     },
     {
       id: "smoke-cloud",
-      name: "Zona de Humo (thung_inflate)",
-      clip: "thung_inflate (3.97s a 1.5x)",
+      name: "Zona de humo",
+      clip: "3,97 s",
       desc: "El jefe se infla con brazos abiertos y exhala una nube tóxica (radio 2.5m, 12s duración) que mancha el visor hasta 92% de hollín.",
       damage: "0 daño a HP; ceguera visual progresiva por hollín",
       counter: "Limpiar el visor con la mano física (< 0.35m de la cara) o disipar la nube con agua (1.5s).",
@@ -868,7 +864,7 @@ export const sahurVoiceQuotes = [
   {
     category: "Aparición (Spawn)",
     quote: "¡¡TUUUNG, TUNG, TUNG, SAHUUUUR!! ¡A levantarse, bombero dormilón! ¡Nadie duerme en este almacén!",
-    context: "Al emerger del piso tras apagar la llama inicial (Y = 2.38m)",
+    context: "Al emerger del piso tras apagar la llama inicial",
     icon: "📢",
   },
   {
@@ -961,64 +957,24 @@ export const lifeAnalogies = [
     lesson: "El ego de los problemas suele chillar más fuerte y agudo justo cuando están perdiendo poder. No te distraigas con la burla: sigue el proceso.",
     icon: "🗣️",
   },
-];
-
-export const supportedHeadsets = [
   {
-    name: "Meta Quest 2",
-    badge: "Plataforma Principal (Nativo)",
-    description: "Target oficial compilado en APK Android Standalone con OpenXR 1.18.0 y XR Interaction Toolkit 3.6.1 a 90 Hz.",
-    icon: "quest",
+    number: "08",
+    title: "La ascensión: dejar ir",
+    lesson: "Al morir, SAHUR no desaparece: sube flotando, dorado, y se va. El juego no te pide odiarlo. Cerrar un capítulo no siempre es destruir: a veces es dejar ir con un poco de gracia.",
+    icon: "🕊️",
   },
   {
-    name: "Meta Quest 3 & Pro",
-    badge: "Retrocompatible",
-    description: "Ejecución fluida standalone con tracking de mandos Touch Pro / Plus y room-scale completo.",
-    icon: "quest",
+    number: "09",
+    title: "La sala es pequeña",
+    lesson: "El almacén mide 6,5 × 6,1 m: todo ocurre a corta distancia, sin gran campo de batalla. Los conflictos importantes suelen ocurrir en espacios pequeños: una habitación, una conversación, una rutina.",
+    icon: "📦",
   },
   {
-    name: "Unity 6 Editor (PC Test)",
-    badge: "Modo Prueba / Debug",
-    description: "Modo teclado/ratón en Editor con teclas K (derrota forzada) y G (vista previa ascensión celestial).",
-    icon: "steam",
+    number: "10",
+    title: "El agua llega más lejos si bombeas",
+    lesson: "El chorro cae con gravedad a los 3,5 m; para llegar a 4,8 m hay que apuntar hacia arriba y compensar la caída. Casi todo lo que quieres alcanzar exige anticipar, apuntar alto y corregir el arco.",
+    icon: "💦",
   },
-  {
-    name: "OpenXR Standalone / PCVR",
-    badge: "Universal Render Pipeline",
-    description: "Desarrollado sobre Unity 6000.6.0f1 y URP 17.6.0 optimizado para hardware móvil XR.",
-    icon: "psvr",
-  },
-];
-
-export const systemSpecs = {
-  minimum: {
-    os: "Meta Quest OS / Android (Quest 2 Standalone)",
-    processor: "Qualcomm Snapdragon XR2 Gen 1 (Quest 2)",
-    memory: "6 GB RAM LPDDR4X",
-    graphics: "Adreno 650 (URP 17.6.0 / Vulkan & GLES3)",
-    storage: "Instalación directa APK Standalone",
-    vrPlayArea: "Room-Scale recomendado de 2.0m × 2.0m libre de tropiezos",
-  },
-  recommended: {
-    os: "Unity 6000.6.0f1 Editor (PC de Desarrollo / Pruebas)",
-    processor: "Intel Core i7-10700K / AMD Ryzen 7 5700X o superior",
-    memory: "16 GB de RAM",
-    graphics: "NVIDIA GeForce RTX 3060 / 3070 o superior",
-    storage: "SSD NVMe para tiempos de carga inmediatos",
-    vrPlayArea: "Área con espacio para ducking físico y salto asistido (0.9m)",
-  },
-};
-
-export const navLinks = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Combate & Sahur", href: "#combate" },
-  { label: "Ideación", href: "#proceso" },
-  { label: "Lore", href: "#historia" },
-  { label: "Arsenal & 3D", href: "#personajes" },
-  { label: "Analogías", href: "#analogias" },
-  { label: "Galería", href: "#galeria" },
-  { label: "Playtesting", href: "#testimonios" },
-  { label: "Specs", href: "#specs" },
 ];
 
 export const socialLinks = [

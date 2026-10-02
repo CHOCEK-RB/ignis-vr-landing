@@ -60,7 +60,6 @@
             <div class="flex items-center gap-3">
               <span class="text-3xl">{rule.icon}</span>
               <div>
-                <span class="text-xs font-mono font-semibold" style="color: {rule.color};">{rule.rgb}</span>
                 <h4 class="text-lg font-bold text-white font-heading">{rule.phase}</h4>
               </div>
             </div>
@@ -111,15 +110,15 @@
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-orange-400">2.</span>
-                <span><strong>Animación Hit:</strong> el jefe reacciona con dolor y quejido específico según el arma (0.63s).</span>
+                <span><strong>Animación Hit:</strong> el jefe reacciona con dolor y quejido específico según el arma (0,63 s).</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-orange-400">3.</span>
-                <span><strong>Encogimiento 10%:</strong> escala ×0.9 con pies anclados al piso en 0.35s.</span>
+                <span><strong>Encogimiento 10%:</strong> escala ×0,9 con los pies anclados al suelo en 0,35 s.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-orange-400">4.</span>
-                <span><strong>Salto a Waypoint:</strong> elige un nuevo punto de los 5 del almacén y su voz sube +8% de tono.</span>
+                <span><strong>Salto a un punto nuevo:</strong> elige uno de los 5 puntos del almacén y su voz sube un 8 % de tono.</span>
               </li>
             </ul>
           </div>
@@ -130,12 +129,12 @@
     <!-- 2. EL CUARTETO DE ATAQUES DE SAHUR -->
     <div class="mb-20">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest block">Patrón FullRotation</span>
+        <span class="text-xs font-mono font-bold text-orange-400 uppercase tracking-widest block">Rotación completa de ataques</span>
         <h3 class="text-3xl font-extrabold text-white font-heading mt-1">
           Los 4 Ataques del Jefe
         </h3>
         <p class="text-slate-400 text-sm mt-2">
-          Ciclo de ≈ 48.6 s (10 s de pausa entre ataques). Cada ofensiva exige una acción física específica en VR.
+          Ciclo de ≈ 48,6 s (10 s de pausa entre ataques). Cada ofensiva exige una acción física específica en VR.
         </p>
       </div>
 
@@ -163,7 +162,7 @@
             <span class="text-4xl">{activeAttack.icon}</span>
             <div>
               <h4 class="text-xl sm:text-2xl font-black text-white font-heading">{activeAttack.name}</h4>
-              <span class="text-xs font-mono text-slate-400">Clip de animación: {activeAttack.clip}</span>
+              <span class="text-xs font-mono text-slate-400">Duración: {activeAttack.clip}</span>
             </div>
           </div>
           <span class="px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-600/20 border border-orange-500/40 text-orange-400">
@@ -198,7 +197,7 @@
           </h3>
         </div>
         <span class="hidden sm:inline text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-xl border border-slate-800">
-          Modulación de tono: Pitch = min(2.0, 1.08 ^ etapa)
+          Su voz se agudiza con cada fase superada
         </span>
       </div>
 

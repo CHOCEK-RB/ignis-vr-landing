@@ -1,5 +1,6 @@
 <script>
   import { lifeAnalogies } from '../data/gameData.js';
+  import { analogiesQuote } from '../data/docsData.js';
 </script>
 
 <section id="analogias" class="relative py-28 bg-[#070a10] border-t border-orange-500/15 overflow-hidden">
@@ -17,11 +18,11 @@
         Analogías para la <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">Vida</span>
       </h2>
       <p class="text-slate-300 mt-4 text-base sm:text-lg">
-        IGNIS se puede leer como un pequeño tratado sobre cómo enfrentar problemas. Estas 7 reflexiones simbólicas nacen directamente de sus mecánicas de combate en Realidad Virtual.
+        IGNIS se puede leer como un pequeño tratado sobre cómo enfrentar problemas. Estas 10 reflexiones simbólicas nacen directamente de sus mecánicas de combate en Realidad Virtual.
       </p>
     </div>
 
-    <!-- Grid de las 7 Analogías -->
+    <!-- Grid de las 10 Analogías -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each lifeAnalogies as analogy, idx (analogy.number)}
         <div
@@ -51,6 +52,16 @@
         </div>
       {/each}
     </div>
+
+    <!-- Frase de cierre (Doc 12) -->
+    <blockquote class="mt-16 max-w-3xl mx-auto text-center rounded-3xl bg-[#0f1524]/90 border border-amber-500/20 px-8 py-10">
+      <p class="text-xl sm:text-2xl font-heading font-bold text-amber-100 leading-relaxed">
+        «{analogiesQuote}»
+      </p>
+      <footer class="mt-4 text-xs font-mono uppercase tracking-wider text-amber-400/80">
+        Doc 12 — Analogías para la vida
+      </footer>
+    </blockquote>
 
   </div>
 </section>

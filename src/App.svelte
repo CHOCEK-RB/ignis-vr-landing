@@ -1,48 +1,49 @@
 <script>
   import Navbar from './components/Navbar.svelte';
+  import ScrollProgress from './components/ui/ScrollProgress.svelte';
+  import Embers from './components/ui/Embers.svelte';
   import Hero from './components/Hero.svelte';
+  import Premise from './components/Premise.svelte';
+  import GameLoop from './components/GameLoop.svelte';
+  import PlayerMechanics from './components/PlayerMechanics.svelte';
+  import Arsenal from './components/Arsenal.svelte';
   import BossCombat from './components/BossCombat.svelte';
+  import AudioVoices from './components/AudioVoices.svelte';
   import IdeationProcess from './components/IdeationProcess.svelte';
   import Story from './components/Story.svelte';
   import Characters from './components/Characters.svelte';
-  import LifeAnalogies from './components/LifeAnalogies.svelte';
-  import Gallery from './components/Gallery.svelte';
+  import Videos from './components/Videos.svelte';
   import Testimonials from './components/Testimonials.svelte';
-  import Specs from './components/Specs.svelte';
-  import { gameInfo } from './data/gameData.js';
+  import Gallery from './components/Gallery.svelte';
+  import LifeAnalogies from './components/LifeAnalogies.svelte';
 </script>
 
 <div class="min-h-screen bg-[#07090e] text-slate-100 flex flex-col font-sans selection:bg-orange-500 selection:text-white">
-  <!-- Barra de navegación fija con efecto glassmorphism -->
+  <ScrollProgress />
   <Navbar />
+  <Embers />
 
-  <!-- Contenido Principal de la Documentación -->
   <main class="flex-1">
-    <!-- 1. Portada del Proyecto -->
+    <!-- ── 1 · EL JUEGO ─────────────────────────────────────── -->
     <Hero />
+    <Premise />
 
-    <!-- 2. Combate Táctico, Fases de Color & Ataques de SAHUR -->
+    <!-- ── 2 · CÓMO SE JUEGA ────────────────────────────────── -->
+    <GameLoop />
+    <PlayerMechanics />
+    <Arsenal />
     <BossCombat />
+    <AudioVoices />
 
-    <!-- 3. Proceso de Ideación & Concepción (Pizarras Miro) -->
+    <!-- ── 3 · CÓMO SE HIZO ─────────────────────────────────── -->
     <IdeationProcess />
-
-    <!-- 4. Storytelling & Lore Oficial -->
     <Story />
-
-    <!-- 5. Personajes, Arsenal y Modelos 3D -->
     <Characters />
 
-    <!-- 6. 7 Analogías para la Vida -->
-    <LifeAnalogies />
-
-    <!-- 7. Galería In-Game Masonry & Carrusel -->
-    <Gallery />
-
-    <!-- 8. Testimonios y Experiencia de Jugadores VR -->
+    <!-- ── 4 · MEDIA Y CIERRE ───────────────────────────────── -->
+    <Videos />
     <Testimonials />
-
-    <!-- 9. Compatibilidad y Requisitos Técnicos (Meta Quest 2 & Unity 6) -->
-    <Specs />
+    <Gallery />
+    <LifeAnalogies />
   </main>
 </div>

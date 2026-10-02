@@ -49,7 +49,7 @@
           Personajes y <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Equipo del Juego</span>
         </h2>
         <p class="text-slate-400 mt-2 text-base max-w-2xl">
-          Modelos 3D originales del videojuego: el traje del bombero Carlos, las mutaciones cromáticas de Ignis, el entorno de la fábrica y el arsenal de extinción física.
+          Modelos 3D originales del videojuego: el traje del bombero, las mutaciones cromáticas de SAHUR, el almacén industrial y el arsenal de extinción física.
         </p>
       </div>
 

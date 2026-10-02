@@ -30,3 +30,7 @@ yarn-error.log*
 pnpm-debug.log*
 .temp/
 .cache/
+
+# Vídeos originales sin comprimir (1,6 GB).
+# Solo se versionan las versiones ya transcodificadas dentro de public/videos/.
+files/videos-originales/

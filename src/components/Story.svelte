@@ -48,13 +48,13 @@
     <!-- Encabezado de la Sección -->
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-950/50 border border-orange-500/30 text-orange-400 text-xs font-bold tracking-widest uppercase mb-4">
-        <span>Storytelling & Cómic Oficial</span>
+        <span>Storyboard de la primera iteración</span>
       </div>
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-heading tracking-tight uppercase">
-        El Bombero y el <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-amber-300">Monstruo de Fuego</span>
+        El bombero y <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-amber-300">SAHUR</span>
       </h2>
       <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-        Sigue la historia ilustrada de Carlos panel a panel: desde la llamada rutinaria hasta el enfrentamiento sobrenatural en el cuarto sellado.
+        Material narrativo de la primera iteración del proyecto: la historia ilustrada del bombero panel a panel, desde la llamada rutinaria hasta el enfrentamiento en el almacén. <span class="text-slate-400">(Narrativa original de storyboard; el orden de fases del juego final es rojo → amarillo → azul.)</span>
       </p>
 
       <!-- Selector de Modo de Vista -->
@@ -290,14 +290,14 @@
       </div>
     {/if}
 
-    <!-- Matriz Cromática de Combate contra Ignis -->
+    <!-- Matriz Cromática de Combate contra SAHUR -->
     <div class="mt-20">
       <div class="text-center mb-8">
         <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-heading uppercase">
           La Regla del Fuego: <span class="text-orange-400">Lectura Cromática de Combate</span>
         </h3>
         <p class="text-sm sm:text-base text-slate-300 mt-2 max-w-xl mx-auto">
-          En Ignis no ganas disparando a ciegas. Cada mutación de color de la bestia exige un recurso táctico específico:
+          En IGNIS no ganas disparando a ciegas. Cada mutación de color del jefe exige un recurso táctico específico:
         </p>
       </div>
 

@@ -94,7 +94,7 @@
 
         <!-- Título Épico con Efecto Ígneo -->
         <h1 class="text-6xl sm:text-7xl xl:text-8xl font-black uppercase tracking-tight text-white font-heading leading-none">
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-amber-300 fire-text-glow">
+          <span class="block section-highlight">
             {gameInfo.title}
           </span>
           <span class="block text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest text-slate-300 mt-2">
@@ -112,14 +112,24 @@
           {gameInfo.synopsis}
         </p>
 
-        <!-- Botón de Exploración de Documentación -->
-        <div class="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+        <!-- Acciones principales -->
+        <div class="mt-8 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 w-full sm:w-auto">
           <a
-            href="#combate"
+            href="#videos"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-white bg-gradient-to-r from-orange-600 via-red-600 to-amber-600 rounded-2xl shadow-xl shadow-orange-600/40 hover:shadow-orange-500/70 hover:scale-105 active:scale-95 transition-all duration-300 border border-orange-400/50 group"
           >
-            <span>Ver Documentación de Combate & IA</span>
+            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span>Ver gameplay</span>
             <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+
+          <a
+            href="#bucle"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-orange-200 hover:text-white bg-[#0f1524]/80 hover:bg-[#141c2e] rounded-2xl border border-orange-500/30 hover:border-orange-400/60 transition-all duration-300"
+          >
+            <span>Así se juega</span>
           </a>
         </div>
 

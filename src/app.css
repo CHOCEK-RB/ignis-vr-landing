@@ -104,3 +104,323 @@
 .animate-pulse-glow {
   animation: pulseGlow 2.8s infinite ease-in-out;
 }
+
+/* ------------------------------------------------------------------ *
+ * Sistema de movimiento y color
+ * Paleta ígnea: naranja → ámbar → rojo, con acento cian y los tres
+ * colores de fase del combate (rojo, amarillo y azul).
+ * ------------------------------------------------------------------ */
+
+/* -- Brasas flotantes (components/ui/Embers.svelte) ---------------- */
+
+.ember-particle {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 9999px;
+  opacity: 0;
+  animation-name: emberRise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes emberRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--ember-opacity, 0.75);
+  }
+  75% {
+    opacity: var(--ember-opacity, 0.75);
+  }
+  100% {
+    transform: translate3d(var(--ember-drift, 0px), -105vh, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* -- Aparición al hacer scroll (actions/reveal.js) ----------------- */
+
+.reveal-init {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance, 22px), 0);
+}
+
+.reveal-init.is-visible {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
+}
+
+/* -- Cabeceras de sección ----------------------------------------- */
+
+/* Degradado que recorre el texto resaltado */
+.section-highlight {
+  background-image: linear-gradient(
+    100deg,
+    #ff6b1a 0%,
+    #ffb703 22%,
+    #ffe6b0 42%,
+    #ff7a2f 62%,
+    #ff3d00 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textSweep 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 16px rgba(255, 100, 0, 0.35));
+}
+
+@keyframes textSweep {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Punto de brasa del badge */
+.badge-ember {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #ff8c1a;
+  box-shadow: 0 0 10px 2px rgba(255, 120, 20, 0.75);
+  animation: emberPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes emberPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* Regla luminosa bajo la cabecera */
+.section-rule {
+  display: block;
+  height: 1px;
+  width: min(320px, 70%);
+  margin: 1.75rem auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 140, 26, 0.75),
+    rgba(255, 183, 3, 0.6),
+    transparent
+  );
+  animation:
+    ruleBreathe 4.5s ease-in-out infinite,
+    ruleHue 18s linear infinite;
+}
+
+@keyframes ruleBreathe {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scaleX(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ruleHue {
+  to {
+    filter: hue-rotate(24deg);
+  }
+}
+
+/* -- Secciones ---------------------------------------------------- */
+
+/* Costura ígnea en el borde superior de cada sección */
+main section[id]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0.7;
+  background: linear-gradient(
+    90deg,
+    transparent 5%,
+    rgba(255, 110, 20, 0.45) 35%,
+    rgba(255, 183, 3, 0.5) 50%,
+    rgba(255, 110, 20, 0.45) 65%,
+    transparent 95%
+  );
+}
+
+/* Resplandor al pasar el ratón por tarjetas y paneles */
+main section[id] :is(.rounded-2xl, .rounded-3xl) {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+main section[id] :is(.rounded-2xl, .rounded-3xl):hover {
+  border-color: rgba(255, 122, 26, 0.45);
+  box-shadow:
+    0 18px 45px -22px rgba(255, 80, 0, 0.85),
+    0 0 0 1px rgba(255, 122, 26, 0.12);
+}
+
+/* Aparición progresiva de tarjetas al hacer scroll.
+   Solo en navegadores con animaciones ligadas al scroll (Chromium). */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main section[id] :is(.rounded-2xl, .rounded-3xl) {
+      animation: cardRise both;
+      animation-timeline: view();
+      animation-range: entry 2% cover 26%;
+    }
+  }
+}
+
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* -- Navegación --------------------------------------------------- */
+
+/* Subrayado ígneo del grupo activo */
+.nav-group-active {
+  position: relative;
+}
+
+.nav-group-active::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.1rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #ff4d00, #ffb703);
+  box-shadow: 0 0 12px rgba(255, 120, 20, 0.8);
+  animation: navUnderline 2.6s ease-in-out infinite;
+}
+
+@keyframes navUnderline {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scaleX(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+/* Línea de calor bajo la barra de navegación */
+.nav-heat {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0.8;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 110, 20, 0.7),
+    rgba(255, 183, 3, 0.6),
+    transparent
+  );
+  animation: ruleHue 14s linear infinite;
+}
+
+/* ------------------------------------------------------------------ *
+ * Ritmo entre secciones y numeración
+ * ------------------------------------------------------------------ */
+
+/* Alterna el fondo de las secciones para separar visualmente los bloques */
+main > section[id] {
+  background-color: #080b12;
+}
+
+main > section[id]:nth-of-type(even) {
+  background-color: #0c1119;
+}
+
+/* Numera las secciones: la portada no cuenta */
+main {
+  counter-reset: section;
+}
+
+main > section[id]:not(#hero) {
+  counter-increment: section;
+}
+
+@media (min-width: 768px) {
+  main > section[id]:not(#hero)::after {
+    content: counter(section, decimal-leading-zero);
+    position: absolute;
+    top: 3.25rem;
+    left: 1.75rem;
+    font-family: Rajdhani, system-ui, sans-serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: rgba(255, 122, 26, 0.08);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Accesibilidad y navegación por anclas
+ * ------------------------------------------------------------------ */
+
+/* Deja aire bajo la navbar fija al saltar a una sección */
+section[id],
+[id].scroll-mt-24 {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Foco visible consistente para navegación con teclado */
+:focus-visible {
+  outline: 2px solid rgba(255, 140, 0, 0.9);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -77,7 +77,7 @@
           Galería del <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Juego en VR</span>
         </h2>
         <p class="text-slate-400 mt-2 text-base max-w-xl">
-          Echa un vistazo directo al visor VR: la fábrica en llamas, el modelado del monstruo, los sacos azules y la tensión física en primera persona.
+          Echa un vistazo directo al visor VR: el almacén en llamas, el modelado de SAHUR, los sacos azules y la tensión física en primera persona.
         </p>
       </div>
 
